@@ -6,16 +6,18 @@ import json
 import config
 
 
+
+mod_aint_found = ModuleNotFoundError
+
 os.system("pip install praw requests")
 
-# Login
+
 def bot_login():
     print("Loggin in.")
     r = praw.Reddit(username = config.username, password = config.password, client_id = config.client_id, client_secret = config.client_secret, user_agent = config.user_agent)
     print("Logged in.")
     return r
 
-# Critcal
 def run_bot(r):
     for sub in config.subreddits:
         submissions = r.subreddit(sub).hot(limit = config.limit)
@@ -54,7 +56,12 @@ def run_bot(r):
                                     "name": "Upvotes",
                                     "value": submission.score,
                                     "inline": False
+                                },
+                                {
+                                    "name": "URL",
+                                    "value": submission.url,
                                 }
+
                             ]
                         }
                     data["embeds"].append(embed)
@@ -83,6 +90,7 @@ def blacklisted_posts():
             f.close()
 
     return blacklist
+
 r = bot_login()
 blacklist = blacklisted_posts()
 while True:
