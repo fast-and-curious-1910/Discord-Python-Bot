@@ -33,9 +33,6 @@ def run_bot(r):
                                 "url": "https://reddit.com/r/{}/comments/{}".format(str(submission.subreddit), str(submission)),
                                 "icon_url": submission.author.icon_img
                             },
-                            "image": {
-                                "url": submission.url
-                            },
                             "fields": [
                                 {
                                     "name": "Post Title",
@@ -60,6 +57,7 @@ def run_bot(r):
                                 {
                                     "name": "URL",
                                     "value": submission.url,
+                                    "inline": True
                                 }
 
                             ]
@@ -77,7 +75,6 @@ def run_bot(r):
                         f.close()
 
                     time.sleep(config.wait_time)
-
     
 
 def blacklisted_posts():
