@@ -2,10 +2,11 @@
 ## Requirementes
 - Python 3.6 Or Higher
 - PRAW Module
+- Requests Module
 
 
 ```bash
-pip install praw
+pip install praw requests
 ```
 
 
