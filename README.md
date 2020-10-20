@@ -1,5 +1,6 @@
 ## Discord Python Bot
-## Requirementes
+This is a Webhook based Discord Bot which grabs technology news from Reddit and , posts into Discord (As Embeds so it looks good)! This uses PRAW and Discord.py.
+## Requirements
 - Python 3.6 Or Higher
 - PRAW Module
 - Requests Module
