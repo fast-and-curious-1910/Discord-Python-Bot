@@ -89,4 +89,5 @@ then go [here](https://github.com/fast-and-curious-1910/Discord-Python-Bot/blob/
 
 
 #### Rembember Web Hooks Can Only Acess A Single Channel!
+Join Our Discord [Here](https://discord.gg/swFUgdp)!
 
